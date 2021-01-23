@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-deployment
+  name: product-descp-deployment
   labels:
-    app: hello-world
+    app: product-descp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-world
+      app: product-descp
   template:
     metadata:
       labels:
-        app: hello-world
+        app: product-descp
     spec:
       containers:
-        - name: hello-world
-          image: minrows/microservice:hello
+        - name: product-descp
+          image: minrows/microservice:productdescp
           ports:
             - containerPort: 9001

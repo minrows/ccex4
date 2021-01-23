@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-deployment
+  name: product-price-deployment
   labels:
-    app: hello-world
+    app: product-price
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-world
+      app: product-price
   template:
     metadata:
       labels:
-        app: hello-world
+        app: product-price
     spec:
       containers:
-        - name: hello-world
-          image: minrows/microservice:hello
+        - name: product-price
+          image: minrows/microservice:productprice
           ports:
             - containerPort: 9001
